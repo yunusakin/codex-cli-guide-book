@@ -2,9 +2,14 @@
 
 A documentation-only guidebook for the OpenAI Codex CLI (terminal coding agent).
 
-Last verified: 2026-02-05
+Last verified: 2026-02-10
 
 Turkce ozet: `README.tr.md`
+
+Docs:
+
+- Full guide: [`docs/`](docs/)
+- Start here: [`docs/00-quickstart.md`](docs/00-quickstart.md)
 
 ## What This Repo Is
 
