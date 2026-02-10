@@ -1,6 +1,6 @@
 # Configuration (config.toml)
 
-Last verified: 2026-02-05
+Last verified: 2026-02-10
 
 Codex reads configuration from multiple layers. Most users only need user config, plus occasional per-project overrides.
 
@@ -28,7 +28,7 @@ Codex also stores per-user state under `CODEX_HOME` (defaults to `~/.codex`).
 model = "gpt-5.2-codex"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
-web_search = "cached"
+# Live web search is enabled per-run with `codex --search`.
 
 [sandbox_workspace_write]
 network_access = false
@@ -39,7 +39,7 @@ inherit = "core"
 
 Notes:
 
-- `web_search = "cached"` uses an OpenAI-maintained index of web results.
+- `--search` enables live web search for that run.
 - `sandbox_workspace_write.network_access` controls whether spawned commands can reach the network.
 
 ## One-Off Overrides From The CLI
@@ -79,4 +79,3 @@ codex --profile full_auto
 ## Project Instructions (AGENTS.md)
 
 Codex reads `AGENTS.md` files at startup to build an instruction chain. See `docs/04-agents-md.md` for details and best practices.
-

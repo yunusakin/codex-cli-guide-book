@@ -1,6 +1,6 @@
 # Slash Commands
 
-Last verified: 2026-02-05
+Last verified: 2026-02-10
 
 Slash commands are the keyboard-first way to steer an active Codex session.
 
@@ -13,7 +13,7 @@ Type `/` in the composer to open the picker.
 - `/approvals` (and sometimes `/permissions`): change approval preset mid-session
 - `/diff`: show git diff (including untracked files)
 - `/review`: run a working tree review
-- `/undo`: revert Codex's most recent turn
+- `/undo`: revert Codex's most recent turn (if enabled; see `codex features list`)
 - `/compact`: summarize long transcripts to free context
 - `/mention`: attach a file to the conversation
 - `/mcp`: view active MCP tools/servers
@@ -37,4 +37,3 @@ Skills are shareable instruction bundles (`SKILL.md` plus optional scripts/resou
 - Invoke implicitly when your task matches a skill description
 
 See `docs/11-team-config-skills-and-rules.md` for how skills are discovered and shared.
-

@@ -1,6 +1,6 @@
 # Cloud Tasks (Codex Cloud)
 
-Last verified: 2026-02-05
+Last verified: 2026-02-10
 
 Codex can run work in isolated, OpenAI-managed cloud environments. Cloud tasks are useful when you want:
 
@@ -22,7 +22,7 @@ Submit a task directly:
 codex cloud exec --env ENV_ID "Summarize open bugs"
 ```
 
-Request best-of-N attempts (1 to 4):
+Request best-of-N attempts:
 
 ```bash
 codex cloud exec --env ENV_ID --attempts 3 "Summarize open bugs"
@@ -33,8 +33,8 @@ codex cloud exec --env ENV_ID --attempts 3 "Summarize open bugs"
 After a cloud task produces a diff, use:
 
 ```bash
-codex apply
+codex cloud diff <TASK_ID>
+codex cloud apply <TASK_ID>
 ```
 
 If `git apply` fails due to conflicts, Codex exits non-zero and prints which files could not be patched cleanly.
-

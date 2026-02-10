@@ -1,6 +1,6 @@
 # Installation And Updates
 
-Last verified: 2026-02-05
+Last verified: 2026-02-10
 
 ## Supported Platforms (In Practice)
 
@@ -32,15 +32,23 @@ Tip: if you manage upgrades centrally (enterprise images, golden laptops), consi
 Codex can emit completion scripts to stdout:
 
 ```bash
-codex completion zsh
 codex completion bash
+codex completion zsh
 codex completion fish
+codex completion powershell
+codex completion elvish
 ```
 
 Example (zsh):
 
 ```bash
 codex completion zsh > "${fpath[1]}/_codex"
+```
+
+To see supported shells on your version:
+
+```bash
+codex completion --help
 ```
 
 ## Local State Locations
@@ -50,4 +58,3 @@ Codex stores per-user state under `CODEX_HOME` (defaults to `~/.codex`). This in
 - `config.toml` (configuration)
 - `auth.json` if using file-based auth storage, otherwise your OS keychain/keyring
 - `history.jsonl` if history persistence is enabled
-

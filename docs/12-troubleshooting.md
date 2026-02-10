@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Last verified: 2026-02-05
+Last verified: 2026-02-10
 
 ## Auth Issues
 
@@ -19,15 +19,17 @@ Project overrides in `.codex/config.toml` load only for trusted projects. If set
 
 There are two separate controls:
 
-- Web search tool mode: `web_search = "cached" | "live" | "disabled"`
+- Web search tool: start Codex with `--search` to enable live web search for that run
 - Spawned command network: `[sandbox_workspace_write].network_access = true`
 
 If you only need web search, do not enable command network access.
 
 ## "I Need To Undo What Codex Just Did"
 
-- `/undo` reverts the most recent turn
+- `/undo` reverts the most recent turn (if enabled)
 - `git restore` / `git checkout` / `git reset` are still available, but keep them for when you are sure you want to throw away local changes
+
+If `/undo` is not available, check `codex features list` and enable it with `codex --enable undo`.
 
 ## "Completions Not Working"
 

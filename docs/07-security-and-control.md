@@ -1,6 +1,6 @@
 # Security, Sandboxing, And Approvals
 
-Last verified: 2026-02-05
+Last verified: 2026-02-10
 
 Codex control comes from two layers:
 
@@ -30,18 +30,17 @@ codex --full-auto
 Dangerous (do not use on your laptop):
 
 ```bash
-codex --yolo
+codex --dangerously-bypass-approvals-and-sandbox
 ```
 
-`--yolo` bypasses approvals and sandboxing. Use only inside an externally hardened environment.
+`--dangerously-bypass-approvals-and-sandbox` disables both approvals and sandboxing. Use only inside an externally hardened environment.
 
 ## Network Access: Two Different Knobs
 
-Web search tool mode (`web_search`):
+Web search tool availability:
 
-- `cached` (default): use an OpenAI-maintained index of web results.
-- `live`: fetch live pages (same as `--search`).
-- `disabled`: remove the tool.
+- `--search` enables live web search for that run (the model gets the native `web_search` tool).
+- Without `--search`, the model will not have live web search.
 
 Spawned command network access (`sandbox_workspace_write.network_access`):
 

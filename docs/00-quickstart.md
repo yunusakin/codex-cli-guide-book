@@ -1,6 +1,6 @@
 # Quickstart
 
-Last verified: 2026-02-05
+Last verified: 2026-02-10
 
 This is the shortest path to "productive and safe" with Codex CLI.
 
@@ -48,7 +48,7 @@ Inside the interactive UI:
 - `/approvals` (or `/permissions` on newer versions): change how often Codex asks.
 - `/diff`: inspect changes (including untracked files).
 - `/review`: ask Codex to review the working tree.
-- `/undo`: roll back the most recent turn.
+- `/undo`: roll back the most recent turn (if enabled; see `codex features list`).
 - `/init`: scaffold an `AGENTS.md` to capture repo-specific instructions.
 
 ## 4. A Good First Prompt Template
@@ -78,4 +78,3 @@ codex exec "summarize the repo structure and list the top 5 risky areas"
 ```
 
 By default, `codex exec` streams progress to stderr and prints the final message to stdout, so you can pipe it into other tools.
-

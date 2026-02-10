@@ -1,6 +1,6 @@
 # Non-Interactive Mode (codex exec)
 
-Last verified: 2026-02-05
+Last verified: 2026-02-10
 
 Use `codex exec` when you want Codex to run inside scripts or CI without opening the TUI.
 
@@ -35,7 +35,7 @@ Notes:
 - In CI, there is usually no way to answer interactive approval prompts, so `--ask-for-approval never` is common.
 - Use sandboxing and exec policy rules to keep the blast radius small.
 
-Avoid `--yolo` in CI unless the runner is already isolated and disposable.
+Avoid `--dangerously-bypass-approvals-and-sandbox` in CI unless the runner is already isolated and disposable.
 
 ## Machine-Readable Output
 
