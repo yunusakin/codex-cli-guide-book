@@ -17,7 +17,7 @@ Codex CLI is OpenAI's coding agent you run locally from your terminal. It can re
 
 This repo turns the official documentation into a practical field guide you can skim, search, and use as a day-to-day reference.
 
-Important: This is not an official manual. When commands/flags differ, trust the official CLI reference and changelog in `docs/references.md`.
+Important: This is not an official manual. Docs change quickly, so when commands/flags differ (or you need the latest behavior), trust the official Codex CLI reference and changelog on developers.openai.com (links in `docs/references.md`).
 
 ## How To Use This Repo
 
