@@ -5,11 +5,11 @@
   "description": "Codex CLI Guide Book website powered by Docusaurus",
   "scripts": {
     "start": "docusaurus start --host 0.0.0.0 --port 3000",
-    "start:sleek": "THEME_VARIANT=sleek docusaurus start --host 0.0.0.0 --port 3000",
+    "start:sleek": "npm run start",
     "build": "docusaurus build",
-    "build:sleek": "THEME_VARIANT=sleek docusaurus build",
+    "build:sleek": "npm run build",
     "serve": "docusaurus serve --host 0.0.0.0 --port 3000",
-    "serve:sleek": "THEME_VARIANT=sleek docusaurus serve --host 0.0.0.0 --port 3000",
+    "serve:sleek": "npm run serve",
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
     "typecheck": "tsc --noEmit"

@@ -1,6 +1,6 @@
 # References (Official)
 
-Last verified: 2026-02-05
+Last verified: 2026-02-11
 
 Primary docs:
 
@@ -26,3 +26,8 @@ Notes:
 
 - Some docs change quickly. When in doubt, trust the CLI reference and the changelog.
 
+Design references used for website theme adaptation:
+
+- Scribbler template showcase (Codrops): https://tympanus.net/codrops/2018/01/12/freebie-scribbler-website-template-html-sketch/
+- Scribbler template repository: https://github.com/amiechen/codrops-scribbler
+- Codrops licensing page: https://tympanus.net/codrops/licensing/

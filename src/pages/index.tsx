@@ -4,47 +4,105 @@ import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 
-const quickActions = [
+const featureItems = [
   {
-    title: "Start Safely",
-    to: "/docs/quickstart",
-    command: "codex --sandbox read-only --ask-for-approval on-request"
+    title: "Fast Start",
+    description: "Install, launch, and move through core workflows in minutes.",
+    to: "/docs/quickstart"
   },
   {
-    title: "Install and Upgrade",
-    to: "/docs/installation",
-    command: "npm i -g @openai/codex@latest"
+    title: "Security Defaults",
+    description: "Use safe sandbox and approval settings before editing unfamiliar repos.",
+    to: "/docs/security-and-control"
   },
   {
-    title: "Set Security Defaults",
-    to: "/docs/security-and-control",
-    command: "codex --full-auto"
+    title: "Team Rules",
+    description: "Lock behavior with AGENTS.md and team-level config conventions.",
+    to: "/docs/agents-md"
   },
   {
-    title: "Run in CI",
-    to: "/docs/noninteractive-and-ci",
-    command: "codex exec --json \"...\""
+    title: "Non-Interactive CI",
+    description: "Run Codex in pipelines using deterministic command patterns.",
+    to: "/docs/noninteractive-and-ci"
+  },
+  {
+    title: "MCP and Tools",
+    description: "Connect external docs and tools through MCP integrations.",
+    to: "/docs/mcp"
+  },
+  {
+    title: "Troubleshooting",
+    description: "Recover quickly from auth, sandbox, and execution failures.",
+    to: "/docs/troubleshooting"
   }
 ];
 
-const chapters = [
-  {title: "00 Quickstart", to: "/docs/quickstart", tag: "Foundation"},
-  {title: "01 Installation", to: "/docs/installation", tag: "Setup"},
-  {title: "02 Authentication", to: "/docs/authentication", tag: "Identity"},
-  {title: "03 Core Workflows", to: "/docs/core-workflows", tag: "Daily Flow"},
-  {title: "04 AGENTS.md", to: "/docs/agents-md", tag: "Instructions"},
-  {title: "05 Slash Commands", to: "/docs/slash-commands", tag: "Session Control"},
-  {title: "06 Configuration", to: "/docs/configuration", tag: "config.toml"},
-  {title: "07 Security and Control", to: "/docs/security-and-control", tag: "Safety"},
-  {title: "08 Non-Interactive and CI", to: "/docs/noninteractive-and-ci", tag: "Automation"},
-  {title: "09 MCP", to: "/docs/mcp", tag: "Tooling"},
-  {title: "10 Cloud Tasks", to: "/docs/cloud-tasks", tag: "Remote Runs"},
-  {title: "11 Team Config", to: "/docs/team-config-skills-and-rules", tag: "Collaboration"},
-  {title: "12 Troubleshooting", to: "/docs/troubleshooting", tag: "Recovery"},
-  {title: "13 Cheat Sheet", to: "/docs/cheatsheet", tag: "Reference"}
+const interactiveFlow = [
+  {
+    action: "Install CLI",
+    value: "npm i -g @openai/codex@latest"
+  },
+  {
+    action: "Safe first session",
+    value: "codex --sandbox read-only --ask-for-approval on-request"
+  },
+  {
+    action: "Resume previous",
+    value: "codex resume --last"
+  },
+  {
+    action: "Help inside session",
+    value: "/help"
+  }
 ];
 
-const officialReferences = [
+const automationFlow = [
+  {
+    action: "JSON output",
+    value: "codex exec --json \"<task>\""
+  },
+  {
+    action: "Skip repo check",
+    value: "codex exec --skip-git-repo-check \"<task>\""
+  },
+  {
+    action: "Set profile",
+    value: "codex --profile ci"
+  },
+  {
+    action: "Cloud run",
+    value: "codex cloud \"<task>\""
+  }
+];
+
+const guideRoadmap = [
+  {
+    label: "00-03",
+    title: "Getting Productive",
+    detail: "Quickstart, installation, authentication, and core workflows.",
+    to: "/docs/core-workflows"
+  },
+  {
+    label: "04-07",
+    title: "Control and Safety",
+    detail: "AGENTS.md, slash commands, configuration, and sandbox controls.",
+    to: "/docs/security-and-control"
+  },
+  {
+    label: "08-11",
+    title: "Scale and Automate",
+    detail: "Non-interactive mode, MCP, cloud tasks, and team configuration.",
+    to: "/docs/team-config-skills-and-rules"
+  },
+  {
+    label: "12-13",
+    title: "Recovery and Cheat Sheet",
+    detail: "Troubleshooting patterns and compact command reference.",
+    to: "/docs/cheatsheet"
+  }
+];
+
+const officialLinks = [
   {
     title: "Codex CLI Overview",
     href: "https://developers.openai.com/codex/cli"
@@ -54,19 +112,7 @@ const officialReferences = [
     href: "https://developers.openai.com/codex/cli/reference"
   },
   {
-    title: "Slash Commands",
-    href: "https://developers.openai.com/codex/cli/slash-commands"
-  },
-  {
-    title: "Configuration",
-    href: "https://developers.openai.com/codex/config-basic"
-  },
-  {
-    title: "Security",
-    href: "https://developers.openai.com/codex/security"
-  },
-  {
-    title: "Changelog",
+    title: "Codex Changelog",
     href: "https://developers.openai.com/codex/changelog"
   }
 ];
@@ -77,90 +123,133 @@ export default function Home(): JSX.Element {
       title="Codex CLI Guide Book"
       description="A practical and visual field guide for OpenAI Codex CLI"
     >
-      <main className={styles.home}>
-        <section className={clsx(styles.section, styles.hero)}>
-          <div className={styles.heroBackdrop} aria-hidden />
+      <main className={styles.landing}>
+        <section className={styles.hero}>
           <p className={styles.kicker}>OpenAI Codex CLI</p>
-          <Heading as="h1" className={styles.title}>
+          <Heading as="h1" className={styles.heroTitle}>
             Codex CLI Guide Book
           </Heading>
-          <p className={styles.subtitle}>
-            A practical field guide with a cleaner visual dashboard. Read fast,
-            move safely, and cross-check official docs when behavior changes.
+          <p className={styles.heroDescription}>
+            A Scribbler-inspired documentation hub for moving fast without losing
+            control. Learn the path once, then use chapters as an operational
+            reference.
           </p>
-          <div className={styles.heroActions}>
-            <Link className={clsx("button button--primary", styles.primaryAction)} to="/docs/quickstart">
-              Start with Quickstart
-            </Link>
-            <Link className={clsx("button button--secondary", styles.secondaryAction)} to="/docs/references">
-              Official References
-            </Link>
-          </div>
         </section>
 
-        <section className={clsx(styles.section, styles.quickActionWrap)}>
-          <div className={styles.sectionHeading}>
-            <Heading as="h2">Quick Actions</Heading>
-            <p>Fast entry points for setup, safety, and automation.</p>
-          </div>
-          <div className={styles.quickGrid}>
-            {quickActions.map((item) => (
-              <Link key={item.title} to={item.to} className={styles.quickCard}>
-                <h3>{item.title}</h3>
-                <code>{item.command}</code>
+        <section className={styles.heroTerminal} aria-label="Quick terminal demo">
+          <pre>
+            <code>{`$ npm i -g @openai/codex@latest
+$ codex --sandbox read-only --ask-for-approval on-request
+$ /help
+$ codex exec --json "summarize repo risks"
+$ codex cloud "fix failing CI and open PR"`}</code>
+          </pre>
+        </section>
+
+        <div className={styles.wrapper}>
+          <section className={styles.installation}>
+            <Heading as="h2" className={styles.sectionTitle}>
+              Install and Run
+            </Heading>
+            <div className={styles.tabContainer}>
+              <ul className={styles.tabMenu}>
+                <li className={clsx(styles.tab, styles.activeTab)}>npm</li>
+                <li className={styles.tab}>safety</li>
+                <li className={styles.tab}>automation</li>
+              </ul>
+              <pre className={styles.codeBlock}>
+                <code>{`npm i -g @openai/codex@latest
+codex
+codex --sandbox read-only --ask-for-approval on-request`}</code>
+              </pre>
+            </div>
+          </section>
+
+          <section className={styles.featureGrid}>
+            {featureItems.map((item) => (
+              <Link key={item.title} to={item.to} className={styles.featureItem}>
+                <Heading as="h3" className={styles.sectionTitle}>
+                  {item.title}
+                </Heading>
+                <p>{item.description}</p>
               </Link>
             ))}
-          </div>
-        </section>
+          </section>
 
-        <section className={clsx(styles.section, styles.chapterWrap)}>
-          <div className={styles.sectionHeading}>
-            <Heading as="h2">Guide Chapters</Heading>
-            <p>Structured in the same order as your canonical Markdown docs.</p>
-          </div>
-          <div className={styles.chapterGrid}>
-            {chapters.map((chapter) => (
-              <Link key={chapter.title} to={chapter.to} className={styles.chapterCard}>
-                <span className={styles.chapterTag}>{chapter.tag}</span>
-                <h3>{chapter.title}</h3>
+          <section className={styles.keybinding}>
+            <ul className={styles.keybindingDetail}>
+              <li className={styles.keybindingTitle}>Interactive Flow</li>
+              {interactiveFlow.map((item) => (
+                <li key={item.action}>
+                  {item.action}
+                  <span className={styles.keyLabel}>{item.value}</span>
+                </li>
+              ))}
+            </ul>
+            <ul className={styles.keybindingDetail}>
+              <li className={styles.keybindingTitle}>CI and Automation Flow</li>
+              {automationFlow.map((item) => (
+                <li key={item.action}>
+                  <span className={styles.keyLabel}>{item.value}</span>
+                  {item.action}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className={styles.callout}>
+            <p>Use the full guide for details, and verify behavior against official docs.</p>
+            <div className={styles.calloutActions}>
+              <Link className={clsx("button button--primary", styles.primaryAction)} to="/docs/quickstart">
+                Open Guide
               </Link>
-            ))}
-          </div>
-        </section>
+              <Link className={clsx("button button--secondary", styles.secondaryAction)} to="/docs/references">
+                Official References
+              </Link>
+            </div>
+          </section>
+        </div>
 
-        <section className={clsx(styles.section, styles.referencesWrap)}>
-          <div className={styles.sectionHeading}>
-            <Heading as="h2">Official Sources</Heading>
-            <p>When docs drift, trust developers.openai.com first.</p>
-          </div>
-          <div className={styles.referenceGrid}>
-            {officialReferences.map((ref) => (
-              <a
-                key={ref.title}
-                href={ref.href}
-                target="_blank"
-                rel="noreferrer"
-                className={styles.referenceCard}
-              >
-                <h3>{ref.title}</h3>
-                <span>Open source of truth</span>
+        <section className={styles.roadmap}>
+          <div className={styles.wrapper}>
+            <Heading as="h2" className={styles.sectionTitle}>
+              Guide Roadmap
+            </Heading>
+            {guideRoadmap.map((item) => (
+              <div key={item.label} className={styles.roadmapItem}>
+                <div className={styles.roadmapMeta}>
+                  <h4 className={styles.roadmapTag}>{item.label}</h4>
+                </div>
+                <div className={styles.roadmapDetail}>
+                  <Link to={item.to} className={styles.roadmapLink}>
+                    {item.title}
+                  </Link>
+                  <p>{item.detail}</p>
+                </div>
+              </div>
+            ))}
+            <div className={styles.roadmapCallout}>
+              <a href="https://github.com/yunusakin/codex-cli-guide-book/blob/main/README.tr.md" target="_blank" rel="noreferrer" className={clsx("button button--secondary", styles.secondaryAction)}>
+                Turkce Ozet
               </a>
-            ))}
+            </div>
           </div>
         </section>
 
-        <section className={clsx(styles.section, styles.metaRow)}>
-          <p>
-            Turkish summary is available in{" "}
-            <a
-              href="https://github.com/yunusakin/codex-cli-guide-book/blob/main/README.tr.md"
-              target="_blank"
-              rel="noreferrer"
-            >
-              README.tr.md
-            </a>
-            .
-          </p>
+        <section className={styles.metaFooter}>
+          <div className={styles.wrapper}>
+            <p>
+              Official sources: {" "}
+              {officialLinks.map((item, index) => (
+                <span key={item.title}>
+                  <a href={item.href} target="_blank" rel="noreferrer" className={styles.metaLink}>
+                    {item.title}
+                  </a>
+                  {index < officialLinks.length - 1 ? " | " : ""}
+                </span>
+              ))}
+            </p>
+          </div>
         </section>
       </main>
     </Layout>
