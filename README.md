@@ -2,7 +2,7 @@
 
 A documentation-only guidebook for the OpenAI Codex CLI (terminal coding agent).
 
-Last verified: 2026-02-10
+Last verified: 2026-02-11
 
 Turkce ozet: `README.tr.md`
 
@@ -10,6 +10,13 @@ Docs:
 
 - Full guide: [`docs/`](docs/)
 - Start here: [`docs/00-quickstart.md`](docs/00-quickstart.md)
+
+Website:
+
+- Framework: Docusaurus
+- Local preview: `npm run start`
+- Production build: `npm run build`
+- Expected public URL: `https://yunusakin.github.io/codex-cli-guide-book/`
 
 ## What This Repo Is
 
@@ -25,6 +32,35 @@ Important: This is not an official manual. Docs change quickly, so when commands
 2. Use GitHub search (or `rg`) to jump to the relevant topic when you get stuck.
 3. When a command matters, cross-check the official reference links in `docs/references.md`.
 4. Keep "Last verified" dates fresh when you update any page.
+
+## Fancy Docs Website (Docusaurus)
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start local site:
+
+```bash
+npm run start
+```
+
+3. Build static site:
+
+```bash
+npm run build
+```
+
+4. Optional CLI deploy command:
+
+```bash
+npm run deploy
+```
+
+CI deploy is configured in `.github/workflows/deploy-docs.yml` for pushes to `main`.
+For GitHub Pages, set Build and deployment source to `GitHub Actions` in repository settings.
 
 ## Quick Start (2 Commands)
 

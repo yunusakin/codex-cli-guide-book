@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#EFF3FD"/>
+  <rect x="44" y="44" width="1112" height="542" rx="34" fill="url(#paint0_linear_2_5)" stroke="#D5DFEF" stroke-width="2"/>
+  <rect x="82" y="104" width="452" height="422" rx="24" fill="#F8FAFF" stroke="#CCD9EE"/>
+  <rect x="562" y="104" width="556" height="180" rx="24" fill="#F8FAFF" stroke="#CCD9EE"/>
+  <rect x="562" y="304" width="270" height="222" rx="24" fill="#F8FAFF" stroke="#CCD9EE"/>
+  <rect x="848" y="304" width="270" height="222" rx="24" fill="#F8FAFF" stroke="#CCD9EE"/>
+  <text x="106" y="188" fill="#1B2744" font-family="Sora, Segoe UI, sans-serif" font-size="66" font-weight="800">
+    Codex CLI
+  </text>
+  <text x="106" y="260" fill="#1B2744" font-family="Sora, Segoe UI, sans-serif" font-size="66" font-weight="800">
+    Guide Book
+  </text>
+  <text x="106" y="330" fill="#3D4D73" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="36" font-weight="600">
+    Fancy docs dashboard for fast CLI workflows
+  </text>
+  <text x="590" y="190" fill="#1A2238" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="40" font-weight="700">
+    Chapters
+  </text>
+  <text x="590" y="238" fill="#3F517B" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="29" font-weight="600">
+    Quickstart, Security, Config, CI, MCP
+  </text>
+  <text x="590" y="390" fill="#1A2238" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="34" font-weight="700">
+    Official
+  </text>
+  <text x="590" y="432" fill="#3F517B" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="27" font-weight="600">
+    developers.openai.com
+  </text>
+  <text x="874" y="390" fill="#1A2238" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="34" font-weight="700">
+    Repo
+  </text>
+  <text x="874" y="432" fill="#3F517B" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="27" font-weight="600">
+    github.com/yunusakin
+  </text>
+  <defs>
+    <linearGradient id="paint0_linear_2_5" x1="184" y1="70" x2="1014" y2="570" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EEF3FF"/>
+    </linearGradient>
+  </defs>
+</svg>
