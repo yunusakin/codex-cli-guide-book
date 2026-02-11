@@ -6,10 +6,13 @@
   "scripts": {
     "start": "docusaurus start --host 0.0.0.0 --port 3000",
     "start:sleek": "npm run start",
+    "start:alt": "THEME_VARIANT=alt docusaurus start --host 0.0.0.0 --port 3000",
     "build": "docusaurus build",
     "build:sleek": "npm run build",
+    "build:alt": "THEME_VARIANT=alt docusaurus build",
     "serve": "docusaurus serve --host 0.0.0.0 --port 3000",
     "serve:sleek": "npm run serve",
+    "serve:alt": "THEME_VARIANT=alt docusaurus serve --host 0.0.0.0 --port 3000",
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
     "typecheck": "tsc --noEmit"

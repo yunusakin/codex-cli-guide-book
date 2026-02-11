@@ -16,8 +16,10 @@ Website:
 - Framework: Docusaurus
 - Local preview (Scribbler theme): `npm run start`
 - Legacy compatibility alias: `npm run start:sleek`
+- Alternate variant preview: `npm run start:alt`
 - Production build (Scribbler theme): `npm run build`
 - Legacy compatibility alias: `npm run build:sleek`
+- Alternate variant build: `npm run build:alt`
 - Expected public URL: `https://yunusakin.github.io/codex-cli-guide-book/`
 
 ## What This Repo Is
@@ -62,7 +64,15 @@ npm run start:sleek
 npm run build:sleek
 ```
 
-5. Optional CLI deploy command:
+5. Alternate variant commands:
+
+```bash
+npm run start:alt
+npm run build:alt
+npm run serve:alt
+```
+
+6. Optional CLI deploy command:
 
 ```bash
 npm run deploy

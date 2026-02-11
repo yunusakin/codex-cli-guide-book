@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import {useMemo, useState} from "react";
 import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
@@ -145,6 +146,13 @@ codex cloud "<task>"`
 ];
 
 export default function Home(): JSX.Element {
+  const {siteConfig} = useDocusaurusContext();
+  const currentVariant =
+    typeof siteConfig.customFields?.themeVariant === "string"
+      ? siteConfig.customFields.themeVariant
+      : "default";
+  const isAltVariant = currentVariant === "alt";
+
   const [activeTab, setActiveTab] = useState<InstallTabId>("npm");
   const activeTabContent = useMemo(
     () => installTabs.find((tab) => tab.id === activeTab)?.content ?? installTabs[0].content,
@@ -156,14 +164,14 @@ export default function Home(): JSX.Element {
       title="Codex CLI Guide Book"
       description="A practical and visual field guide for OpenAI Codex CLI"
     >
-      <main className={styles.landing}>
+      <main className={clsx(styles.landing, isAltVariant && styles.altVariant)}>
         <section className={styles.hero}>
           <p className={styles.kicker}>OpenAI Codex CLI</p>
           <Heading as="h1" className={styles.heroTitle}>
             Codex CLI Guide Book
           </Heading>
           <p className={styles.heroDescription}>
-            A Scribbler-inspired documentation hub for moving fast without losing
+            A modern documentation hub for moving fast without losing
             control. Learn the path once, then use chapters as an operational
             reference.
           </p>

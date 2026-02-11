@@ -2,6 +2,8 @@ import {themes as prismThemes} from "prism-react-renderer";
 import type {Config} from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+const themeVariant = process.env.THEME_VARIANT === "alt" ? "alt" : "default";
+
 const config: Config = {
   title: "Codex CLI Guide Book",
   tagline: "A practical field guide for OpenAI Codex CLI",
@@ -42,7 +44,7 @@ const config: Config = {
         },
         blog: false,
         theme: {
-          customCss: "./src/css/custom.sleek.css"
+          customCss: themeVariant === "alt" ? "./src/css/custom.alt.css" : "./src/css/custom.sleek.css"
         }
       } satisfies Preset.Options
     ]
@@ -148,7 +150,10 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["bash", "toml", "json", "yaml"]
     }
-  } satisfies Preset.ThemeConfig
+  } satisfies Preset.ThemeConfig,
+  customFields: {
+    themeVariant
+  }
 };
 
 export default config;

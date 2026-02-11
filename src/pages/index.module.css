@@ -351,6 +351,116 @@
   color: #fe6a6b;
 }
 
+.altVariant {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafd 100%);
+  color: #5d6778;
+}
+
+.altVariant .hero {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(40, 183, 107, 0.18), transparent 42%),
+    radial-gradient(circle at 88% 0%, rgba(40, 183, 107, 0.1), transparent 44%),
+    #f8fbf9;
+  border-bottom: 1px solid #e7e9ed;
+}
+
+.altVariant .kicker {
+  color: #2f8f58;
+}
+
+.altVariant .heroTitle {
+  color: #252930;
+}
+
+.altVariant .heroDescription {
+  color: #5d6778;
+}
+
+.altVariant .heroTerminal {
+  background: #252930;
+  box-shadow: 0 22px 50px rgba(37, 41, 48, 0.24);
+}
+
+.altVariant .sectionTitle {
+  color: #252930;
+}
+
+.altVariant .tabButton {
+  color: #747f94;
+}
+
+.altVariant .tabButton:hover,
+.altVariant .activeTabButton {
+  color: #28b76b;
+  border-bottom-color: #28b76b;
+}
+
+.altVariant .codeBlock {
+  background: #f4fcf6;
+  border-color: #e0f7e6;
+  color: #252930;
+}
+
+.altVariant .featureItem {
+  border-color: #e7e9ed;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.altVariant .featureItem p {
+  color: #5d6778;
+}
+
+.altVariant .featureItem:hover {
+  border-color: #28b76b;
+  box-shadow: 0 16px 28px rgba(40, 183, 107, 0.15);
+}
+
+.altVariant .keybindingDetail {
+  border-color: #e7e9ed;
+}
+
+.altVariant .keybindingTitle {
+  color: #252930;
+}
+
+.altVariant .keyLabel {
+  border-color: #d9dce1;
+  box-shadow: 0 1px 0 #adb4c0;
+  color: #252930;
+  background: #f5f6f8;
+}
+
+.altVariant .primaryAction::after {
+  background: #d7f4e4;
+}
+
+.altVariant .roadmap {
+  background: #f5f6f8;
+  border-color: #e7e9ed;
+}
+
+.altVariant .roadmapItem {
+  border-color: #e7e9ed;
+}
+
+.altVariant .roadmapTag {
+  color: #747f94;
+}
+
+.altVariant .roadmapLink {
+  color: #252930;
+}
+
+.altVariant .roadmapLink:hover,
+.altVariant .metaLink:hover {
+  color: #28b76b;
+}
+
+.altVariant .metaLink {
+  color: #252930;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
