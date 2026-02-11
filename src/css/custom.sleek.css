@@ -139,9 +139,9 @@ body {
 }
 
 .theme-doc-markdown pre {
-  border: 1px solid #30271f;
+  border: 1px solid #e3d2c2;
   border-radius: 14px;
-  background: linear-gradient(180deg, #1f1914 0%, #2a2018 100%);
+  background: linear-gradient(180deg, #fffbf8 0%, #fff4ea 100%);
 }
 
 .theme-doc-markdown code {
@@ -155,7 +155,7 @@ body {
 .theme-doc-markdown pre code {
   border: 0;
   background: transparent;
-  color: #f6ebe0;
+  color: inherit;
   padding: 0;
 }
 
