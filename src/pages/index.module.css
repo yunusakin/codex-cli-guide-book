@@ -14,9 +14,25 @@
   --card-hover-border: var(--home-card-hover-border, #81c2bb);
   --meta-bg: var(--home-meta-bg, linear-gradient(90deg, #ebf9f6, #f1fbf9));
   --meta-link: var(--home-meta-link, #0f5f57);
+  --section-line: var(--home-section-line, rgba(16, 185, 167, 0.55));
+  --hero-overlay-a: var(--home-hero-overlay-a, rgba(16, 185, 166, 0.08));
+  --hero-overlay-b: var(--home-hero-overlay-b, rgba(14, 165, 233, 0.08));
+  --hero-glow-a: var(--home-glow-a, rgba(20, 184, 166, 0.35));
+  --hero-glow-b: var(--home-glow-b, rgba(14, 165, 233, 0.28));
+  --kicker-border: var(--home-kicker-border, #8ec6c1);
+  --kicker-bg: var(--home-kicker-bg, #e8f9f6);
+  --kicker-text: var(--home-kicker-text, #0b4f49);
+  --primary-shadow: var(--home-primary-shadow, 0 8px 20px rgba(13, 95, 87, 0.28));
+  --secondary-border-hover: var(--home-secondary-border-hover, #79b2ac);
+  --card-shadow-hover: var(--home-card-shadow-hover, 0 14px 30px rgba(12, 41, 54, 0.14));
+  --quick-card-bg: var(--home-quick-card-bg, linear-gradient(180deg, #ffffff, #f6fcfb));
+  --chapter-card-overlay-a: var(--home-chapter-overlay-a, rgba(15, 118, 110, 0.04));
+  --chapter-card-overlay-b: var(--home-chapter-overlay-b, rgba(14, 165, 233, 0.03));
+  --reference-card-bg: var(--home-reference-card-bg, linear-gradient(180deg, #ffffff, #f8fdfd));
+  --hero-base-bg: var(--home-hero-base-bg, linear-gradient(180deg, #ffffff 0%, #f7fdfd 100%));
   --radius-xl: 30px;
   --radius-lg: 18px;
-  --shadow-card: 0 18px 44px rgba(9, 30, 43, 0.08);
+  --shadow-card: var(--home-section-shadow, 0 18px 44px rgba(9, 30, 43, 0.08));
   width: min(1240px, 92vw);
   margin: 0 auto;
   padding: 2.2rem 0 4.2rem;
@@ -39,15 +55,15 @@
   inset: 0 auto auto 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(16, 185, 167, 0.55), rgba(16, 185, 167, 0));
+  background: linear-gradient(90deg, var(--section-line), transparent);
 }
 
 .hero {
   padding: 3.3rem;
   isolation: isolate;
   background:
-    linear-gradient(130deg, rgba(16, 185, 166, 0.08), rgba(14, 165, 233, 0.08)),
-    linear-gradient(180deg, #ffffff 0%, #f7fdfd 100%);
+    linear-gradient(130deg, var(--hero-overlay-a), var(--hero-overlay-b)),
+    var(--hero-base-bg);
 }
 
 .heroBackdrop {
@@ -57,8 +73,8 @@
   height: 540px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 32% 30%, rgba(20, 184, 166, 0.35), rgba(20, 184, 166, 0)),
-    radial-gradient(circle at 70% 40%, rgba(14, 165, 233, 0.28), rgba(14, 165, 233, 0));
+    radial-gradient(circle at 32% 30%, var(--hero-glow-a), transparent),
+    radial-gradient(circle at 70% 40%, var(--hero-glow-b), transparent);
   z-index: -1;
 }
 
@@ -66,15 +82,15 @@
   display: inline-flex;
   align-items: center;
   margin: 0 0 0.8rem;
-  border: 1px solid #8ec6c1;
+  border: 1px solid var(--kicker-border);
   border-radius: 999px;
   padding: 0.24rem 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--accent-strong);
+  color: var(--kicker-text);
   font-size: 0.75rem;
-  background: #e8f9f6;
+  background: var(--kicker-bg);
 }
 
 .title {
@@ -105,7 +121,7 @@
   border: 0;
   background: linear-gradient(140deg, var(--accent) 0%, var(--accent-strong) 100%);
   color: #f8ffff;
-  box-shadow: 0 8px 20px rgba(13, 95, 87, 0.28);
+  box-shadow: var(--primary-shadow);
 }
 
 .primaryAction:hover {
@@ -120,7 +136,7 @@
 }
 
 .secondaryAction:hover {
-  border-color: #79b2ac;
+  border-color: var(--secondary-border-hover);
 }
 
 .sectionHeading {
@@ -161,7 +177,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.05rem;
-  background: linear-gradient(180deg, #ffffff, #f6fcfb);
+  background: var(--quick-card-bg);
   color: inherit;
   text-decoration: none;
   transition:
@@ -207,7 +223,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(140deg, rgba(15, 118, 110, 0.04), rgba(14, 165, 233, 0.03)),
+    linear-gradient(140deg, var(--chapter-card-overlay-a), var(--chapter-card-overlay-b)),
     #ffffff;
   color: var(--text);
   text-decoration: none;
@@ -249,7 +265,7 @@
 .referenceCard {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, #ffffff, #f8fdfd);
+  background: var(--reference-card-bg);
   color: var(--text);
   text-decoration: none;
   padding: 1rem;
@@ -274,7 +290,7 @@
 .referenceCard:hover {
   transform: translateY(-4px);
   border-color: var(--card-hover-border);
-  box-shadow: 0 14px 30px rgba(12, 41, 54, 0.14);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .metaRow {

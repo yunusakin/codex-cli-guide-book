@@ -1,155 +1,184 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Archivo:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap");
 
 :root {
-  --ifm-font-family-base: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", sans-serif;
-  --ifm-heading-font-family: "Archivo", "Avenir Next", "Segoe UI", sans-serif;
-  --ifm-color-primary: #d97706;
-  --ifm-color-primary-dark: #c76f05;
-  --ifm-color-primary-darker: #bd6805;
-  --ifm-color-primary-darkest: #9b5404;
-  --ifm-color-primary-light: #e9861d;
-  --ifm-color-primary-lighter: #ec8f2f;
-  --ifm-color-primary-lightest: #f0a24f;
-  --ifm-background-color: #fffaf5;
-  --ifm-navbar-background-color: rgba(255, 249, 242, 0.85);
-  --ifm-navbar-link-color: #2f281f;
-  --ifm-navbar-link-hover-color: #9b5404;
+  --ifm-font-family-base: "Nunito Sans", "Segoe UI", sans-serif;
+  --ifm-heading-font-family: "Nunito Sans", "Segoe UI", sans-serif;
+  --ifm-color-primary: #432e30;
+  --ifm-color-primary-dark: #3b282a;
+  --ifm-color-primary-darker: #362526;
+  --ifm-color-primary-darkest: #2b1e1f;
+  --ifm-color-primary-light: #5a4042;
+  --ifm-color-primary-lighter: #66494b;
+  --ifm-color-primary-lightest: #8e7474;
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: #f8f8fa;
+  --ifm-navbar-link-color: #432e30;
+  --ifm-navbar-link-hover-color: #fe6a6b;
   --ifm-code-font-size: 91%;
-  --ifm-font-color-base: #302922;
-  --ifm-link-color: #b66100;
-  --ifm-menu-color-active: #9b5404;
-  --ifm-border-color: #ecdccf;
-  --ifm-heading-color: #20180f;
-  --ifm-global-shadow-lw: 0 12px 26px rgba(54, 34, 14, 0.08);
-  --home-surface: #fffefc;
-  --home-surface-muted: #fff8f1;
-  --home-surface-deep: #fff2e4;
-  --home-border: #eddccc;
-  --home-border-strong: #d9b184;
-  --home-text: #23180f;
-  --home-text-muted: #6c5441;
-  --home-accent: #c36505;
-  --home-accent-strong: #8f4703;
-  --home-tag-border: #d9b38b;
-  --home-tag-bg: #fff0e0;
-  --home-tag-text: #7d4308;
-  --home-card-hover-border: #d6a06b;
-  --home-meta-bg: linear-gradient(90deg, #fff1df, #fff6ea);
-  --home-meta-link: #8f4703;
+  --ifm-font-color-base: #4a4a4a;
+  --ifm-link-color: #432e30;
+  --ifm-menu-color-active: #fe6a6b;
+  --ifm-border-color: #e9eaee;
+  --ifm-heading-color: #432e30;
+  --ifm-global-shadow-lw: 0 12px 28px rgba(67, 46, 48, 0.09);
+
+  --home-surface: #ffffff;
+  --home-surface-muted: #f8f8fa;
+  --home-surface-deep: #f0e8e8;
+  --home-border: #e9eaee;
+  --home-border-strong: #8e7474;
+  --home-text: #432e30;
+  --home-text-muted: #4a4a4a;
+  --home-accent: #fe6a6b;
+  --home-accent-strong: #b94b4c;
+  --home-tag-border: #8e7474;
+  --home-tag-bg: #ffe4e4;
+  --home-tag-text: #432e30;
+  --home-card-hover-border: #fe6a6b;
+  --home-meta-bg: linear-gradient(90deg, #fff5f5, #fff0f0);
+  --home-meta-link: #b94b4c;
+  --home-section-line: rgba(254, 106, 107, 0.7);
+  --home-hero-overlay-a: rgba(254, 106, 107, 0.08);
+  --home-hero-overlay-b: rgba(67, 46, 48, 0.04);
+  --home-glow-a: rgba(254, 106, 107, 0.22);
+  --home-glow-b: rgba(67, 46, 48, 0.12);
+  --home-kicker-border: #8e7474;
+  --home-kicker-bg: #fff0f0;
+  --home-kicker-text: #432e30;
+  --home-primary-shadow: 0 10px 22px rgba(185, 75, 76, 0.26);
+  --home-secondary-border-hover: #fe6a6b;
+  --home-card-shadow-hover: 0 14px 30px rgba(67, 46, 48, 0.13);
+  --home-quick-card-bg: linear-gradient(180deg, #ffffff, #fbfbfd);
+  --home-chapter-overlay-a: rgba(254, 106, 107, 0.06);
+  --home-chapter-overlay-b: rgba(142, 116, 116, 0.05);
+  --home-reference-card-bg: linear-gradient(180deg, #ffffff, #fafbfc);
+  --home-hero-base-bg: linear-gradient(180deg, #f8f8fa 0%, #ffffff 100%);
+  --home-section-shadow: 0 16px 34px rgba(67, 46, 48, 0.1);
 }
 
 body {
-  background:
-    radial-gradient(circle at 8% -4%, rgba(251, 146, 60, 0.26), rgba(251, 146, 60, 0)),
-    radial-gradient(circle at 90% 6%, rgba(217, 119, 6, 0.2), rgba(217, 119, 6, 0)),
-    radial-gradient(circle at 56% 85%, rgba(244, 114, 182, 0.1), rgba(244, 114, 182, 0)),
-    #fffaf5;
+  background: #ffffff;
 }
 
 .navbar {
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(227, 207, 189, 0.85);
-  box-shadow: 0 8px 22px rgba(59, 37, 14, 0.08);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #ececef;
+  box-shadow: 0 8px 20px rgba(67, 46, 48, 0.06);
 }
 
 .navbar__title {
+  font-weight: 900;
   letter-spacing: -0.01em;
-  font-weight: 700;
 }
 
 .navbar__link {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .theme-doc-sidebar-container {
-  border-right: 1px solid #ead8ca;
-  background: linear-gradient(180deg, #fffaf4 0%, #fff3e7 100%);
+  border-right: 1px solid #ececef;
+  background: #f8f8fa;
 }
 
 .menu__link {
-  border-radius: 12px;
+  border-radius: 10px;
   margin-bottom: 0.2rem;
   font-weight: 600;
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+.menu__link:hover {
+  color: #b94b4c;
+  background: #fff4f4;
 }
 
 .menu__link--active {
-  box-shadow: inset 0 0 0 1px #ddb48d;
-  background: linear-gradient(90deg, #fff1e1 0%, #fff6ed 100%);
+  box-shadow: inset 0 0 0 1px #fe6a6b;
+  background: #fff1f1;
 }
 
 .theme-doc-markdown {
-  background: linear-gradient(180deg, #ffffff 0%, #fffbf7 100%);
-  border: 1px solid #ebdccf;
-  border-radius: 24px;
-  padding: 1.4rem 1.45rem;
-  box-shadow: 0 15px 30px rgba(55, 35, 14, 0.07);
+  background: #ffffff;
+  border: 1px solid #ececef;
+  border-radius: 14px;
+  padding: 1.35rem 1.45rem;
+  box-shadow: 0 10px 26px rgba(67, 46, 48, 0.08);
 }
 
 .theme-doc-markdown > h1:first-child {
   margin-top: 0;
-  font-size: clamp(2rem, 3.4vw, 2.9rem);
+  font-size: clamp(2rem, 3.3vw, 2.85rem);
+  font-weight: 900;
   letter-spacing: -0.015em;
 }
 
 .theme-doc-markdown > p:first-of-type {
   display: inline-flex;
   align-items: center;
-  gap: 0.36rem;
+  gap: 0.34rem;
   margin-top: 0.5rem;
-  margin-bottom: 1.3rem;
-  padding: 0.3rem 0.72rem;
+  margin-bottom: 1.25rem;
+  padding: 0.26rem 0.68rem;
   border-radius: 999px;
-  border: 1px solid #ddb58e;
-  background: #fff0de;
-  color: #8f4804;
+  border: 1px solid #f1c1c1;
+  background: #fff1f1;
+  color: #b94b4c;
   font-size: 0.83rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .theme-doc-markdown > p:first-of-type::before {
   content: "Verified";
   display: inline-flex;
-  background: #ffe4c7;
-  border: 1px solid #d7a975;
-  color: #7a3f04;
+  background: #ffe4e4;
+  border: 1px solid #f0b7b7;
+  color: #a13e3f;
   border-radius: 999px;
-  padding: 0.07rem 0.45rem;
+  padding: 0.06rem 0.42rem;
   font-size: 0.72rem;
   letter-spacing: 0.01em;
 }
 
+.theme-doc-markdown h2,
+.theme-doc-markdown h3,
+.theme-doc-markdown h4 {
+  letter-spacing: -0.01em;
+}
+
 .theme-doc-markdown blockquote {
-  border-left: 4px solid #d97706;
-  background: linear-gradient(90deg, #fff4e6 0%, #fff9f1 100%);
-  border-radius: 10px;
+  border-left: 4px solid #fe6a6b;
+  background: #fff7f7;
+  border-radius: 8px;
 }
 
 .theme-doc-markdown table {
-  border: 1px solid #e8d8ca;
-  border-radius: 12px;
+  border: 1px solid #ececef;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .theme-doc-markdown table thead {
-  background: #fff1e0;
+  background: #fafbfc;
 }
 
 .theme-doc-markdown table tr:nth-child(even) {
-  background: #fffbf6;
+  background: #fcfcfd;
 }
 
 .theme-doc-markdown pre {
-  border: 1px solid #e3d2c2;
-  border-radius: 14px;
-  background: linear-gradient(180deg, #fffbf8 0%, #fff4ea 100%);
+  border: 1px solid #e4d8d8;
+  border-radius: 10px;
+  background: #f8f8fa;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
 .theme-doc-markdown code {
-  border: 1px solid #edd9c8;
-  border-radius: 8px;
-  background: #fff3e6;
-  color: #8f4703;
+  border: 1px solid #eee0e0;
+  border-radius: 6px;
+  background: #f7f1f1;
+  color: #5d3f41;
   padding: 0.08rem 0.3rem;
+  font-family: "Space Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .theme-doc-markdown pre code {
@@ -160,19 +189,19 @@ body {
 }
 
 .pagination-nav__link {
-  border: 1px solid #e9dacc;
-  border-radius: 14px;
-  background: linear-gradient(180deg, #ffffff 0%, #fff7ef 100%);
+  border: 1px solid #ececef;
+  border-radius: 10px;
+  background: #fafbfc;
 }
 
 .footer {
-  border-top: 1px solid #e8d7c8;
-  background: linear-gradient(180deg, #fffaf5 0%, #fff1e5 100%);
+  border-top: 1px solid #ececef;
+  background: #f8f8fa;
 }
 
 @media (max-width: 996px) {
   .theme-doc-markdown {
-    border-radius: 18px;
+    border-radius: 12px;
     padding: 1rem;
   }
 }
