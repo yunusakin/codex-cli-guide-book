@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import {useMemo, useState} from "react";
 import Link from "@docusaurus/Link";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
@@ -117,7 +118,39 @@ const officialLinks = [
   }
 ];
 
+type InstallTabId = "npm" | "safety" | "automation";
+
+const installTabs: Array<{id: InstallTabId; label: string; content: string}> = [
+  {
+    id: "npm",
+    label: "npm",
+    content: `npm i -g @openai/codex@latest
+codex
+codex --sandbox read-only --ask-for-approval on-request`
+  },
+  {
+    id: "safety",
+    label: "safety",
+    content: `codex --sandbox read-only --ask-for-approval on-request
+codex --sandbox workspace-write --ask-for-approval on-request
+codex --full-auto`
+  },
+  {
+    id: "automation",
+    label: "automation",
+    content: `codex exec --json "<task>"
+codex exec --skip-git-repo-check "<task>"
+codex cloud "<task>"`
+  }
+];
+
 export default function Home(): JSX.Element {
+  const [activeTab, setActiveTab] = useState<InstallTabId>("npm");
+  const activeTabContent = useMemo(
+    () => installTabs.find((tab) => tab.id === activeTab)?.content ?? installTabs[0].content,
+    [activeTab]
+  );
+
   return (
     <Layout
       title="Codex CLI Guide Book"
@@ -152,15 +185,30 @@ $ codex cloud "fix failing CI and open PR"`}</code>
               Install and Run
             </Heading>
             <div className={styles.tabContainer}>
-              <ul className={styles.tabMenu}>
-                <li className={clsx(styles.tab, styles.activeTab)}>npm</li>
-                <li className={styles.tab}>safety</li>
-                <li className={styles.tab}>automation</li>
+              <ul className={styles.tabMenu} role="tablist" aria-label="Install command presets">
+                {installTabs.map((tab) => (
+                  <li key={tab.id} role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={activeTab === tab.id}
+                      aria-controls={`install-panel-${tab.id}`}
+                      id={`install-tab-${tab.id}`}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={clsx(styles.tabButton, activeTab === tab.id && styles.activeTabButton)}
+                    >
+                      {tab.label}
+                    </button>
+                  </li>
+                ))}
               </ul>
-              <pre className={styles.codeBlock}>
-                <code>{`npm i -g @openai/codex@latest
-codex
-codex --sandbox read-only --ask-for-approval on-request`}</code>
+              <pre
+                className={styles.codeBlock}
+                role="tabpanel"
+                id={`install-panel-${activeTab}`}
+                aria-labelledby={`install-tab-${activeTab}`}
+              >
+                <code>{activeTabContent}</code>
               </pre>
             </div>
           </section>

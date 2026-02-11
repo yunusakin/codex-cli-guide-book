@@ -55,12 +55,18 @@
 .heroTerminal pre {
   margin: 0;
   padding: 1.35rem 1.5rem;
+  min-height: 265px;
   white-space: pre-line;
-  color: #fafbfc;
+  background: transparent !important;
+  border: 0 !important;
+  color: #fafbfc !important;
   font-size: 0.95rem;
 }
 
 .heroTerminal code {
+  display: block;
+  background: transparent !important;
+  color: #fafbfc !important;
   font-family: "Space Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -96,7 +102,25 @@
   font-size: 0.95rem;
 }
 
-.activeTab {
+.tabButton {
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: #8e7474;
+  padding: 0.25rem 0.2rem;
+  text-transform: lowercase;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.tabButton:hover {
+  color: #432e30;
+}
+
+.activeTab,
+.activeTabButton {
   border-bottom-color: #432e30;
   color: #432e30;
   font-weight: 700;
@@ -108,6 +132,7 @@
   border-radius: 6px;
   background: #f8f8fa;
   padding: 1rem 1.3rem;
+  min-height: 116px;
   color: #5a4042;
 }
 
