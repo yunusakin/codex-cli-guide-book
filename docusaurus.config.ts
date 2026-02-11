@@ -2,6 +2,8 @@ import {themes as prismThemes} from "prism-react-renderer";
 import type {Config} from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+const isSleekVariant = process.env.THEME_VARIANT === "sleek";
+
 const config: Config = {
   title: "Codex CLI Guide Book",
   tagline: "A practical field guide for OpenAI Codex CLI",
@@ -42,7 +44,7 @@ const config: Config = {
         },
         blog: false,
         theme: {
-          customCss: "./src/css/custom.css"
+          customCss: isSleekVariant ? "./src/css/custom.sleek.css" : "./src/css/custom.css"
         }
       } satisfies Preset.Options
     ]

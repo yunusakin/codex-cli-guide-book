@@ -15,7 +15,9 @@ Website:
 
 - Framework: Docusaurus
 - Local preview: `npm run start`
+- Local preview (sleek variant): `npm run start:sleek`
 - Production build: `npm run build`
+- Production build (sleek variant): `npm run build:sleek`
 - Expected public URL: `https://yunusakin.github.io/codex-cli-guide-book/`
 
 ## What This Repo Is
@@ -53,7 +55,14 @@ npm run start
 npm run build
 ```
 
-4. Optional CLI deploy command:
+4. Optional sleek theme variant (local preview or build):
+
+```bash
+npm run start:sleek
+npm run build:sleek
+```
+
+5. Optional CLI deploy command:
 
 ```bash
 npm run deploy

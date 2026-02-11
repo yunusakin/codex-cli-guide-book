@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Archivo:wght@500;600;700&display=swap");
+
+:root {
+  --ifm-font-family-base: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", sans-serif;
+  --ifm-heading-font-family: "Archivo", "Avenir Next", "Segoe UI", sans-serif;
+  --ifm-color-primary: #d97706;
+  --ifm-color-primary-dark: #c76f05;
+  --ifm-color-primary-darker: #bd6805;
+  --ifm-color-primary-darkest: #9b5404;
+  --ifm-color-primary-light: #e9861d;
+  --ifm-color-primary-lighter: #ec8f2f;
+  --ifm-color-primary-lightest: #f0a24f;
+  --ifm-background-color: #fffaf5;
+  --ifm-navbar-background-color: rgba(255, 249, 242, 0.85);
+  --ifm-navbar-link-color: #2f281f;
+  --ifm-navbar-link-hover-color: #9b5404;
+  --ifm-code-font-size: 91%;
+  --ifm-font-color-base: #302922;
+  --ifm-link-color: #b66100;
+  --ifm-menu-color-active: #9b5404;
+  --ifm-border-color: #ecdccf;
+  --ifm-heading-color: #20180f;
+  --ifm-global-shadow-lw: 0 12px 26px rgba(54, 34, 14, 0.08);
+  --home-surface: #fffefc;
+  --home-surface-muted: #fff8f1;
+  --home-surface-deep: #fff2e4;
+  --home-border: #eddccc;
+  --home-border-strong: #d9b184;
+  --home-text: #23180f;
+  --home-text-muted: #6c5441;
+  --home-accent: #c36505;
+  --home-accent-strong: #8f4703;
+  --home-tag-border: #d9b38b;
+  --home-tag-bg: #fff0e0;
+  --home-tag-text: #7d4308;
+  --home-card-hover-border: #d6a06b;
+  --home-meta-bg: linear-gradient(90deg, #fff1df, #fff6ea);
+  --home-meta-link: #8f4703;
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% -4%, rgba(251, 146, 60, 0.26), rgba(251, 146, 60, 0)),
+    radial-gradient(circle at 90% 6%, rgba(217, 119, 6, 0.2), rgba(217, 119, 6, 0)),
+    radial-gradient(circle at 56% 85%, rgba(244, 114, 182, 0.1), rgba(244, 114, 182, 0)),
+    #fffaf5;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(227, 207, 189, 0.85);
+  box-shadow: 0 8px 22px rgba(59, 37, 14, 0.08);
+}
+
+.navbar__title {
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+.navbar__link {
+  font-weight: 600;
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid #ead8ca;
+  background: linear-gradient(180deg, #fffaf4 0%, #fff3e7 100%);
+}
+
+.menu__link {
+  border-radius: 12px;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.menu__link--active {
+  box-shadow: inset 0 0 0 1px #ddb48d;
+  background: linear-gradient(90deg, #fff1e1 0%, #fff6ed 100%);
+}
+
+.theme-doc-markdown {
+  background: linear-gradient(180deg, #ffffff 0%, #fffbf7 100%);
+  border: 1px solid #ebdccf;
+  border-radius: 24px;
+  padding: 1.4rem 1.45rem;
+  box-shadow: 0 15px 30px rgba(55, 35, 14, 0.07);
+}
+
+.theme-doc-markdown > h1:first-child {
+  margin-top: 0;
+  font-size: clamp(2rem, 3.4vw, 2.9rem);
+  letter-spacing: -0.015em;
+}
+
+.theme-doc-markdown > p:first-of-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.36rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.3rem;
+  padding: 0.3rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid #ddb58e;
+  background: #fff0de;
+  color: #8f4804;
+  font-size: 0.83rem;
+  font-weight: 700;
+}
+
+.theme-doc-markdown > p:first-of-type::before {
+  content: "Verified";
+  display: inline-flex;
+  background: #ffe4c7;
+  border: 1px solid #d7a975;
+  color: #7a3f04;
+  border-radius: 999px;
+  padding: 0.07rem 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.01em;
+}
+
+.theme-doc-markdown blockquote {
+  border-left: 4px solid #d97706;
+  background: linear-gradient(90deg, #fff4e6 0%, #fff9f1 100%);
+  border-radius: 10px;
+}
+
+.theme-doc-markdown table {
+  border: 1px solid #e8d8ca;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.theme-doc-markdown table thead {
+  background: #fff1e0;
+}
+
+.theme-doc-markdown table tr:nth-child(even) {
+  background: #fffbf6;
+}
+
+.theme-doc-markdown pre {
+  border: 1px solid #30271f;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #1f1914 0%, #2a2018 100%);
+}
+
+.theme-doc-markdown code {
+  border: 1px solid #edd9c8;
+  border-radius: 8px;
+  background: #fff3e6;
+  color: #8f4703;
+  padding: 0.08rem 0.3rem;
+}
+
+.theme-doc-markdown pre code {
+  border: 0;
+  background: transparent;
+  color: #f6ebe0;
+  padding: 0;
+}
+
+.pagination-nav__link {
+  border: 1px solid #e9dacc;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ef 100%);
+}
+
+.footer {
+  border-top: 1px solid #e8d7c8;
+  background: linear-gradient(180deg, #fffaf5 0%, #fff1e5 100%);
+}
+
+@media (max-width: 996px) {
+  .theme-doc-markdown {
+    border-radius: 18px;
+    padding: 1rem;
+  }
+}
