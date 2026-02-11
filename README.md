@@ -14,12 +14,12 @@ Docs:
 Website:
 
 - Framework: Docusaurus
-- Local preview (Scribbler theme): `npm run start`
-- Legacy compatibility alias: `npm run start:sleek`
-- Alternate variant preview: `npm run start:alt`
-- Production build (Scribbler theme): `npm run build`
-- Legacy compatibility alias: `npm run build:sleek`
-- Alternate variant build: `npm run build:alt`
+- Local preview (active default): `npm run start`
+- Legacy variant preview: `npm run start:sleek`
+- Explicit default alias: `npm run start:alt`
+- Production build (active default): `npm run build`
+- Legacy variant build: `npm run build:sleek`
+- Explicit default alias: `npm run build:alt`
 - Expected public URL: `https://yunusakin.github.io/codex-cli-guide-book/`
 
 ## What This Repo Is
@@ -57,14 +57,14 @@ npm run start
 npm run build
 ```
 
-4. Legacy alias commands (same behavior as default):
+4. Legacy variant commands:
 
 ```bash
 npm run start:sleek
 npm run build:sleek
 ```
 
-5. Alternate variant commands:
+5. Default variant aliases:
 
 ```bash
 npm run start:alt
@@ -83,10 +83,8 @@ For GitHub Pages, set Build and deployment source to `GitHub Actions` in reposit
 
 ## Theme Attribution
 
-- Website visuals are adapted from the Scribbler template by Codrops.
-- Original showcase: https://tympanus.net/codrops/2018/01/12/freebie-scribbler-website-template-html-sketch/
-- Template repo: https://github.com/amiechen/codrops-scribbler
-- Licensing notes: https://tympanus.net/codrops/licensing/
+- Website visuals include adapted open-source template styles.
+- Template source links are tracked in `docs/references.md`.
 - This repo uses an adapted Docusaurus implementation, not a republished as-is template bundle.
 
 ## Quick Start (2 Commands)

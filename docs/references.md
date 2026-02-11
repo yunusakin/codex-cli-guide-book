@@ -28,6 +28,6 @@ Notes:
 
 Design references used for website theme adaptation:
 
-- Scribbler template showcase (Codrops): https://tympanus.net/codrops/2018/01/12/freebie-scribbler-website-template-html-sketch/
-- Scribbler template repository: https://github.com/amiechen/codrops-scribbler
+- Template showcase (Codrops): https://tympanus.net/codrops/2018/01/12/freebie-scribbler-website-template-html-sketch/
+- Template repository: https://github.com/amiechen/codrops-scribbler
 - Codrops licensing page: https://tympanus.net/codrops/licensing/
