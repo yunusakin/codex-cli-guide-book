@@ -2,7 +2,7 @@ import {themes as prismThemes} from "prism-react-renderer";
 import type {Config} from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
-const themeVariant = process.env.THEME_VARIANT === "default" ? "default" : "alt";
+const themeVariant = process.env.THEME_VARIANT === "alt" ? "alt" : "default";
 
 const config: Config = {
   title: "Codex CLI Guide Book",

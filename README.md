@@ -15,11 +15,11 @@ Website:
 
 - Framework: Docusaurus
 - Local preview (active default): `npm run start`
-- Legacy variant preview: `npm run start:sleek`
-- Explicit default alias: `npm run start:alt`
+- Default style alias: `npm run start:sleek`
+- Alternate variant preview: `npm run start:alt`
 - Production build (active default): `npm run build`
-- Legacy variant build: `npm run build:sleek`
-- Explicit default alias: `npm run build:alt`
+- Default style alias: `npm run build:sleek`
+- Alternate variant build: `npm run build:alt`
 - Expected public URL: `https://yunusakin.github.io/codex-cli-guide-book/`
 
 ## What This Repo Is
@@ -57,14 +57,14 @@ npm run start
 npm run build
 ```
 
-4. Legacy variant commands:
+4. Default style alias commands:
 
 ```bash
 npm run start:sleek
 npm run build:sleek
 ```
 
-5. Default variant aliases:
+5. Alternate variant commands:
 
 ```bash
 npm run start:alt
